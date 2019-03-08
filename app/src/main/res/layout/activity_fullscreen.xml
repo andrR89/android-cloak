@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#0099cc"
+  tools:context=".FullscreenActivity">
+
+  <TextView
+    android:id="@+id/text_battery_level"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:text="@string/nivel_da_bateria"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"/>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+      android:id="@+id/text_hour_minute"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="00:00"
+      android:textSize="125sp" />
+
+    <TextView
+      android:id="@+id/text_seconds"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="00"
+      android:textSize="40sp" />
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/image_options"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@android:drawable/ic_menu_preferences"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:padding="20dp"
+    android:clickable="true"/>
+
+  <LinearLayout
+    android:id="@+id/linear_options"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/options"
+    android:layout_alignParentBottom="true">
+
+    <CheckBox
+      android:id="@+id/check_battery"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="4"
+      android:padding="30dp"
+      android:text="@string/nivel_da_bateria" />
+
+    <ImageView
+      android:id="@+id/image_close"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:src="@android:drawable/ic_menu_close_clear_cancel"
+      android:padding="20dp"
+      android:clickable="true"/>
+
+  </LinearLayout>
+
+</RelativeLayout>
